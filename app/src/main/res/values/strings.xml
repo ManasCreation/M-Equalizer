@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">M-Equalizer</string>
+    <string name="creator_credit">Designed &amp; Developed by Manas Mete</string>
+    <string name="service_channel_name">M-Equalizer Audio Service</string>
+    <string name="service_channel_desc">Active audio processing service for M-Equalizer</string>
+    <string name="action_on">ON</string>
+    <string name="action_off">OFF</string>
+    <string name="notification_title">M-Equalizer Active</string>
+    <string name="notification_text">Studio DSP Engine running</string>
+</resources>

@@ -1,0 +1,7 @@
+{
+  "name": "M-Equalizer",
+  "description": "Ultra-low latency, professional-grade 100% offline Android Equalizer app with 10-band EQ, anti-clipping limiter, dynamic range compressor, bass booster, 3D spatial surround, reverb, and Room DB multi-device profiles. Designed & Developed by Manas Mete.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

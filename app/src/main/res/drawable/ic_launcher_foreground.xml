@@ -1,0 +1,126 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Equalizer vertical bars in M shape with gradient -->
+    <!-- Bar 1 (Left outer) -->
+    <path
+        android:pathData="M 32,38 L 32,70"
+        android:strokeWidth="4"
+        android:strokeLineCap="round">
+        <aapt:attr name="android:strokeColor">
+            <gradient
+                android:startX="32" android:startY="70"
+                android:endX="32" android:endY="38"
+                android:type="linear">
+                <item android:offset="0.0" android:color="#00E5FF" />
+                <item android:offset="1.0" android:color="#00B0FF" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <!-- Bar 2 (Left inner) -->
+    <path
+        android:pathData="M 43,46 L 43,66"
+        android:strokeWidth="4"
+        android:strokeLineCap="round">
+        <aapt:attr name="android:strokeColor">
+            <gradient
+                android:startX="43" android:startY="66"
+                android:endX="43" android:endY="46"
+                android:type="linear">
+                <item android:offset="0.0" android:color="#00E5FF" />
+                <item android:offset="1.0" android:color="#7C4DFF" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <!-- Bar 3 (Center) -->
+    <path
+        android:pathData="M 54,54 L 54,64"
+        android:strokeWidth="4"
+        android:strokeLineCap="round">
+        <aapt:attr name="android:strokeColor">
+            <gradient
+                android:startX="54" android:startY="64"
+                android:endX="54" android:endY="54"
+                android:type="linear">
+                <item android:offset="0.0" android:color="#7C4DFF" />
+                <item android:offset="1.0" android:color="#E040FB" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <!-- Bar 4 (Right inner) -->
+    <path
+        android:pathData="M 65,46 L 65,66"
+        android:strokeWidth="4"
+        android:strokeLineCap="round">
+        <aapt:attr name="android:strokeColor">
+            <gradient
+                android:startX="65" android:startY="66"
+                android:endX="65" android:endY="46"
+                android:type="linear">
+                <item android:offset="0.0" android:color="#E040FB" />
+                <item android:offset="1.0" android:color="#D500F9" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <!-- Bar 5 (Right outer) -->
+    <path
+        android:pathData="M 76,38 L 76,70"
+        android:strokeWidth="4"
+        android:strokeLineCap="round">
+        <aapt:attr name="android:strokeColor">
+            <gradient
+                android:startX="76" android:startY="70"
+                android:endX="76" android:endY="38"
+                android:type="linear">
+                <item android:offset="0.0" android:color="#D500F9" />
+                <item android:offset="1.0" android:color="#FF4081" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Glowing Slider Nodes -->
+    <path
+        android:pathData="M 32,46 m -3.5,0 a 3.5,3.5 0 1,0 7,0 a 3.5,3.5 0 1,0 -7,0"
+        android:fillColor="#00E5FF" />
+    <path
+        android:pathData="M 43,52 m -3.5,0 a 3.5,3.5 0 1,0 7,0 a 3.5,3.5 0 1,0 -7,0"
+        android:fillColor="#651FFF" />
+    <path
+        android:pathData="M 54,58 m -3.5,0 a 3.5,3.5 0 1,0 7,0 a 3.5,3.5 0 1,0 -7,0"
+        android:fillColor="#D500F9" />
+    <path
+        android:pathData="M 65,52 m -3.5,0 a 3.5,3.5 0 1,0 7,0 a 3.5,3.5 0 1,0 -7,0"
+        android:fillColor="#F50057" />
+    <path
+        android:pathData="M 76,46 m -3.5,0 a 3.5,3.5 0 1,0 7,0 a 3.5,3.5 0 1,0 -7,0"
+        android:fillColor="#FF1744" />
+
+    <!-- Stylized 'M' connecting crest curve at top -->
+    <path
+        android:pathData="M 32,38 L 43,46 L 54,54 L 65,46 L 76,38"
+        android:strokeWidth="2.5"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round">
+        <aapt:attr name="android:strokeColor">
+            <gradient
+                android:startX="32" android:startY="38"
+                android:endX="76" android:endY="38"
+                android:type="linear">
+                <item android:offset="0.0" android:color="#00E5FF" />
+                <item android:offset="0.5" android:color="#FFFFFF" />
+                <item android:offset="1.0" android:color="#FF4081" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Bottom baseline wave accent -->
+    <path
+        android:pathData="M 28,75 Q 41,72 54,75 T 80,75"
+        android:strokeWidth="1.5"
+        android:strokeColor="#5500E5FF"
+        android:strokeLineCap="round" />
+</vector>
+
