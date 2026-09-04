@@ -19,13 +19,14 @@ jobs:
         distribution: 'temurin'
         java-version: '17'
 
-    - name: Enable Xvfb Virtual Display
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y xvfb
+    - name: Generate Gradle Wrapper
+      run: gradle wrapper --gradle-version 8.5
 
-    - name: Build Debug APK with System Gradle
-      run: xvfb-run --auto-servernum gradle assembleDebug --no-daemon
+    - name: Grant execute permission for gradlew
+      run: chmod +x gradlew
+
+    - name: Build Debug APK
+      run: ./gradlew assembleDebug --no-daemon
 
     - name: Upload APK Artifact
       uses: actions/upload-artifact@v4
