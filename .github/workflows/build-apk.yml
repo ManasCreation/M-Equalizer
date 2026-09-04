@@ -10,29 +10,61 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 1. Checkout source code
       - name: Checkout Code
         uses: actions/checkout@v4
 
+      # 2. Setup Java 17
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
           distribution: "temurin"
           java-version: "17"
 
+      # 3. Generate Gradle Wrapper
+      # AGP 9.1.1 requires Gradle 9.3.1+
       - name: Generate Gradle Wrapper
         run: gradle wrapper --gradle-version 9.3.1
 
+      # 4. Give Gradle permission
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
+      # 5. Check Gradle version
       - name: Check Gradle Version
         run: ./gradlew --version
 
+      # 6. Create debug.keystore
+      # app/build.gradle.kts expects:
+      # ${rootDir}/debug.keystore
+      - name: Generate Debug Keystore
+        run: |
+          keytool -genkeypair \
+            -v \
+            -keystore debug.keystore \
+            -storepass android \
+            -alias androiddebugkey \
+            -keypass android \
+            -keyalg RSA \
+            -keysize 2048 \
+            -validity 10000 \
+            -dname "CN=Android Debug,O=Android,C=US"
+
+      # 7. Verify debug keystore
+      - name: Verify Debug Keystore
+        run: |
+          keytool -list \
+            -keystore debug.keystore \
+            -storepass android \
+            -alias androiddebugkey
+
+      # 8. Build Debug APK
       - name: Build Debug APK
         run: ./gradlew assembleDebug --no-daemon
 
+      # 9. Upload APK
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
         with:
           name: M-Equalizer-Debug
-          path: app/build/outputs/apk/debug/app-debug.ap
+          path: app/build/outputs/apk/debug/app-debug.apk
